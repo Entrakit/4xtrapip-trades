@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4xtraPip - Enter The Underground</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .matrix-bg {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('/api/placeholder/1920/1080');
+            animation: matrixFloat 20s linear infinite;
+        }
+        
+        @keyframes matrixFloat {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+        
+        .glow-button {
+            animation: glowPulse 2s infinite;
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px #4F46E5; }
+            50% { box-shadow: 0 0 40px #4F46E5; }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div class="matrix-bg min-h-screen">
+        <!-- Welcome Portal -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="text-center mb-12">
+                <h1 class="text-6xl font-bold mb-4">4xtraPip</h1>
+                <p class="text-xl opacity-70">"Where Headless Traders Fear to Trade"</p>
+            </div>
+
+            <!-- Access Button -->
+            <div class="max-w-md mx-auto bg-gray-900 rounded-lg p-8 mb-8">
+                <div class="text-center mb-6">
+                    <div class="text-2xl font-bold mb-2">Lifetime Access</div>
+                    <div class="text-4xl font-bold text-indigo-500 mb-4">$99</div>
+                    <div class="text-sm opacity-70 mb-4">
+                        *No refunds for those who can't handle the truth
+                    </div>
+                </div>
+                
+                <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg glow-button">
+                    Enter The Underground
+                </button>
+            </div>
+
+            <!-- Underground Preview -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <div class="text-2xl mb-2">🎭</div>
+                    <div class="font-bold mb-2">The Peanut Gallery</div>
+                    <div class="text-sm opacity-70">
+                        Where Penny Shortsell reigns supreme
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <div class="text-2xl mb-2">👻</div>
+                    <div class="font-bold mb-2">Ghost Trader's Lounge</div>
+                    <div class="text-sm opacity-70">
+                        Rothschild's top hat collection
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <div class="text-2xl mb-2">🤖</div>
+                    <div class="font-bold mb-2">Headless AI Corner</div>
+                    <div class="text-sm opacity-70">
+                        "Would ya look at that!"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secret Extras -->
+            <div class="bg-gray-900 rounded-lg p-8">
+                <div class="text-center mb-6">
+                    <div class="text-2xl font-bold mb-2">The Underground Extras</div>
+                    <div class="text-sm opacity-70">
+                        (For those who dare to look deeper)
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-4 bg-gray-800 rounded">
+                        <span>Boxcar Emos Trading Signals</span>
+                        <span class="text-indigo-400">🚂</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-gray-800 rounded">
+                        <span>Future's Lotion Application Guide</span>
+                        <span class="text-indigo-400">🧴</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-gray-800 rounded">
+                        <span>Starboy's Market Prophecies</span>
+                        <span class="text-indigo-400">⭐</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="text-center mt-12 text-xs opacity-50 italic">
+                *Side effects may include: uncontrollable urges to sell bark to trees,
+                seeing ghost traders everywhere, and understanding the true meaning of
+                "Would ya look at that!"
+            </div>
+        </div>
+    </div>
+</body>
+</html>

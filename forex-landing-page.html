@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4xtraPip Trading | Professional Forex & Stock Trading Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .backdrop-blur {
+            backdrop-filter: blur(8px);
+        }
+        
+        .age-verify-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+        
+        .age-verify-modal.active {
+            display: flex;
+        }
+        
+        .hero-section {
+            background-image: url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .tool-card {
+            transition: all 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Age Verification Modal -->
+    <div class="age-verify-modal active flex items-center justify-center">
+        <div class="bg-gray-800 p-8 rounded-lg max-w-md w-full mx-4 backdrop-blur">
+            <h2 class="text-2xl font-bold mb-4">Age Verification Required</h2>
+            <p class="mb-6">You must be 18 years or older to access 4xtraPip Trading Platform.</p>
+            <div class="space-y-4">
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" class="form-checkbox">
+                    <span>I am 18 years or older</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" class="form-checkbox">
+                    <span>I accept the cookie policy and terms of service</span>
+                </label>
+                <button onclick="document.querySelector('.age-verify-modal').style.display='none'" 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Enter Platform
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-90 backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold text-blue-500">4xtraPip</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Sign In</button>
+                    <button class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center">
+        <div class="text-center z-10">
+            <h1 class="text-6xl font-bold mb-4 text-white">Welcome to 4xtraPip</h1>
+            <p class="text-xl mb-8">Professional Trading Tools for Every Level</p>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg">
+                Get Started for $99 Lifetime Access
+            </button>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">About 4xtraPip</h2>
+                <p class="text-xl text-gray-300">Your Gateway to Professional Forex & Stock Trading</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-blue-500">Our Mission</h3>
+                    <p class="text-gray-300">Empowering traders of all skill levels with professional-grade tools and real-time market insights. Our platform combines advanced trading capabilities with an intuitive interface.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-blue-500">Community Impact</h3>
+                    <p class="text-gray-300">We donate 10 cents of every dollar from our round-up program to local youth centers, including Boys & Girls Clubs of America, fostering the next generation of financial leaders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trading Tools Grid -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center">Trading Toolkit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Tool Cards - First Row -->
+                <div class="tool-card bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Live Forex Charts</h3>
+                    <p class="text-gray-400">Real-time currency pair tracking with advanced technical indicators</p>
+                </div>
+                <div class="tool-card bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">NYSE Live Feed</h3>
+                    <p class="text-gray-400">Direct access to NYSE market data and real-time stock quotes</p>
+                </div>
+                <div class="tool-card bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Energy Sector Watch</h3>
+                    <p class="text-gray-400">Specialized tracking of energy markets and utility rates</p>
+                </div>
+                <div class="tool-card bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Market Movers</h3>
+                    <p class="text-gray-400">Top gainers, losers, and most active securities</p>
+                </div>
+                <!-- Repeat for remaining rows -->
+            </div>
+            <div class="text-center mt-12">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg">
+                    View All Tools
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Platform Features</h2>
+                <p class="text-xl text-gray-300">Everything you need for successful trading</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Real-Time Data</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Live market feeds</li>
+                        <li>• Instant price updates</li>
+                        <li>• Breaking news alerts</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Analysis Tools</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Technical indicators</li>
+                        <li>• Chart patterns</li>
+                        <li>• Market sentiment analysis</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Community</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Expert insights</li>
+                        <li>• Trading forums</li>
+                        <li>• Educational resources</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">4xtraPip</h3>
+                    <p class="text-gray-400">Professional Trading Platform</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>About Us</li>
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Terms of Service</li>
+                        <li>Privacy Policy</li>
+                        <li>Risk Disclosure</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Connect</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Twitter</li>
+                        <li>LinkedIn</li>
+                        <li>Facebook</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 4xtraPip Trading. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+# 4xtraPip Trading Platform
+
+## Repository Structure
+
+```
+4xtrapip/
+├── index.html              # Main landing page with age verification
+├── README.md              # Repository documentation
+├── assets/
+│   ├── css/
+│   │   ├── main.css      # Main styles
+│   │   └── components.css # Component-specific styles
+│   ├── js/
+│   │   ├── main.js       # Main JavaScript
+│   │   └── utils.js      # Utility functions
+│   └── images/           # Image assets
+│
+├── components/
+│   ├── ghost-traders/    # Ghost trading components
+│   │   ├── rothschild.jsx
+│   │   ├── pelosi.jsx
+│   │   └── market-spirits.jsx
+│   ├── trading-tools/    # Trading tool components
+│   │   ├── dandruff-indicator.jsx
+│   │   ├── conspiracy-scanner.jsx
+│   │   └── ai-headless.jsx
+│   └── market-indicators/
+│       ├── clock-collection.jsx
+│       └── chess-board.jsx
+│
+├── pages/
+│   ├── dashboard.html    # Main trading dashboard
+│   ├── tools.html       # Trading tools page
+│   ├── blog/           # Eve's trading blog
+│   │   ├── index.html
+│   │   └── posts/
+│   └── underground/    # Secret extras
+│
+└── config/
+    ├── _config.yml     # GitHub Pages configuration
+    └── CNAME          # Custom domain configuration
+```
+
+2. Now for organizing our artifacts. Would you like me to:
+   - Convert our React components to standalone modules
+   - Set up the component dependencies
+   - Create the component library
+
+3. For GitHub Pages configuration, here's what we need:
+
+
+# _config.yml
+title: 4xtraPip Trading
+description: Where Ghost Traders Fear to Trade
+baseurl: ""
+url: "https://4xtrapip.trade"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

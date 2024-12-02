@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4xtraPip Dashboard | Professional Trading Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .chart-container {
+            height: 400px;
+            background: rgba(30, 41, 59, 0.5);
+        }
+        
+        .mini-chart {
+            height: 100px;
+        }
+        
+        .ticker-tape {
+            animation: scroll 20s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .currency-card {
+            transition: all 0.3s ease;
+        }
+        
+        .currency-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Top Navigation -->
+    <nav class="bg-gray-800 border-b border-gray-700">
+        <div class="max-w-full mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-500">4xtraPip</span>
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-blue-500">Dashboard</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Markets</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Portfolio</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Tools</a>
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Analytics</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="bg-gray-700 rounded-lg px-4 py-2">
+                        <span class="text-sm text-gray-300">Impact Balance:</span>
+                        <span class="ml-2 text-green-400">$127.50</span>
+                    </div>
+                    <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg">Trade Now</button>
+                    <img src="/api/placeholder/32/32" class="h-8 w-8 rounded-full" alt="Profile">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Live Ticker -->
+    <div class="bg-gray-800 py-2 border-b border-gray-700 overflow-hidden">
+        <div class="ticker-tape flex space-x-8 text-sm">
+            <span class="text-green-500">EUR/USD 1.2145 +0.0012</span>
+            <span class="text-red-500">GBP/USD 1.3750 -0.0008</span>
+            <span class="text-green-500">USD/JPY 109.45 +0.15</span>
+            <span class="text-green-500">Oil $75.30 +1.20</span>
+            <span class="text-red-500">Gold $1,845.20 -5.80</span>
+            <span class="text-green-500">S&P 500 4,185.25 +12.50</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-full mx-auto px-4 py-6">
+        <div class="grid grid-cols-12 gap-6">
+            <!-- Main Chart Section -->
+            <div class="col-span-8">
+                <div class="bg-gray-800 rounded-lg p-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">EUR/USD</h2>
+                            <p class="text-gray-400">Last Updated: 12:45:30 EST</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="px-3 py-1 rounded bg-gray-700 text-sm">1H</button>
+                            <button class="px-3 py-1 rounded bg-gray-700 text-sm">4H</button>
+                            <button class="px-3 py-1 rounded bg-blue-600 text-sm">1D</button>
+                            <button class="px-3 py-1 rounded bg-gray-700 text-sm">1W</button>
+                        </div>
+                    </div>
+                    <div class="chart-container rounded-lg"></div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-span-4 space-y-6">
+                <!-- Quick Trade -->
+                <div class="bg-gray-800 rounded-lg p-4">
+                    <h3 class="text-lg font-bold mb-4">Quick Trade</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span>EUR/USD</span>
+                            <span class="text-green-500">1.2145</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg">Buy</button>
+                            <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg">Sell</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Open Positions -->
+                <div class="bg-gray-800 rounded-lg p-4">
+                    <h3 class="text-lg font-bold mb-4">Open Positions</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>GBP/USD</span>
+                            <span class="text-green-500">+1.25%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>USD/JPY</span>
+                            <span class="text-red-500">-0.43%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Widgets -->
+            <div class="col-span-12">
+                <div class="grid grid-cols-4 gap-6">
+                    <!-- Market Movers -->
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <h3 class="text-lg font-bold mb-4">Top Movers</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Oil</span>
+                                <span class="text-green-500">+2.5%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Natural Gas</span>
+                                <span class="text-green-500">+1.8%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Coal</span>
+                                <span class="text-red-500">-1.2%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Energy Sector -->
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <h3 class="text-lg font-bold mb-4">Energy Sector</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Electricity Rates</span>
+                                <span class="text-yellow-500">+0.8%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Gas Utilities</span>
+                                <span class="text-green-500">+1.2%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Solar Energy</span>
+                                <span class="text-green-500">+2.1%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community Impact -->
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <h3 class="text-lg font-bold mb-4">Community Impact</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Your Donations</span>
+                                <span class="text-blue-500">$127.50</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Community Total</span>
+                                <span class="text-blue-500">$24,856</span>
+                            </div>
+                            <div class="text-sm text-gray-400">
+                                Supporting 5 local youth centers
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Feed -->
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <h3 class="text-lg font-bold mb-4">Latest News</h3>
+                        <div class="space-y-2">
+                            <div class="text-sm">
+                                <p class="text-gray-400">12:30 EST</p>
+                                <p>Fed Announces Interest Rate Decision</p>
+                            </div>
+                            <div class="text-sm">
+                                <p class="text-gray-400">12:15 EST</p>
+                                <p>EUR/USD Hits New Weekly High</p>
+                            </div>
+                            <div class="text-sm">
+                                <p class="text-gray-400">12:00 EST</p>
+                                <p>Energy Prices Surge on Supply News</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trade Execution Modal -->
+    <div class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-gray-800 rounded-lg p-6 max-w-md w-full">
+            <h3 class="text-xl font-bold mb-4">Execute Trade</h3>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-400">Amount</label>
+                    <input type="number" class="mt-1 block w-full bg-gray-700 rounded-md border-gray-600">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400">Stop Loss</label>
+                    <input type="number" class="mt-1 block w-full bg-gray-700 rounded-md border-gray-600">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400">Take Profit</label>
+                    <input type="number" class="mt-1 block w-full bg-gray-700 rounded-md border-gray-600">
+                </div>
+                <div class="flex space-x-4">
+                    <button class="flex-1 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg">Confirm</button>
+                    <button class="flex-1 bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# Connecting Your Domain to GitHub Pages
+
+1. In your Google Domains settings:
+   - Go to DNS settings
+   - Add these A records pointing to GitHub Pages:
+     ```
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+     ```
+   - Add CNAME record:
+     - Name: www
+     - Value: [your-username].github.io
+
+2. In your GitHub repository:
+   - Create a file named 'CNAME'
+   - Add your domain: 4xtrapip.trade
+   - Save and commit
+
+3. In repository settings:
+   - Go to Pages section
+   - Choose main branch as source
+   - Save changes
+   - Wait for SSL certificate (might take 24h)
+
+4. Verify setup:
+   - Check https://4xtrapip.trade
+   - Verify SSL certificate
+   - Test all subpages
