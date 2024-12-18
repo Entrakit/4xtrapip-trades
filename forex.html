@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4xtraPip Forex Module</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .module-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .module-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #4338ca 0%, #3b82f6 100%);
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Forex Trading: The Raw Truth</h1>
+            <p class="text-xl text-gray-400">"Where pips go to die and dreams come to reality check"</p>
+        </div>
+
+        <!-- Main Module Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Core Modules -->
+            <div class="col-span-2 space-y-6">
+                <!-- Module 1 -->
+                <div class="module-hover bg-gray-800 rounded-lg p-6 border border-blue-600">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">1. Reality Check</h3>
+                        <span class="bg-blue-600 px-3 py-1 rounded text-sm">Required</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Why 95% of traders fail and how not to be one of them</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-red-500">●</span>
+                            <span>The Leverage Trap</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-yellow-500">●</span>
+                            <span>Emotional Trading Death Spiral</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">●</span>
+                            <span>Risk Management (Yes, You Need This)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="module-hover bg-gray-800 rounded-lg p-6 border border-purple-600">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">2. Currency Pairs & Market Structure</h3>
+                        <span class="bg-purple-600 px-3 py-1 rounded text-sm">Intermediate</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Major pairs, crosses, and why your cousin's friend's uncle is wrong</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-blue-500">●</span>
+                            <span>Major Pairs Deep Dive</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-pink-500">●</span>
+                            <span>Cross Rate Mysteries</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-orange-500">●</span>
+                            <span>Market Hours That Matter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="module-hover bg-gray-800 rounded-lg p-6 border border-green-600">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">3. Technical Analysis (No Crystal Balls)</h3>
+                        <span class="bg-green-600 px-3 py-1 rounded text-sm">Advanced</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Charts don't predict the future, but they might keep you alive</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-indigo-500">●</span>
+                            <span>Support & Resistance (For Real)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-teal-500">●</span>
+                            <span>Indicator Mythology Busted</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-rose-500">●</span>
+                            <span>Price Action That Works</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="space-y-6">
+                <!-- Progress Tracker -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Your Progress</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Reality Check</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="h-2 bg-gray-700 rounded">
+                                <div class="progress-bar h-full rounded" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Currency Pairs</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="h-2 bg-gray-700 rounded">
+                                <div class="progress-bar h-full rounded" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Technical Analysis</span>
+                                <span>20%</span>
+                            </div>
+                            <div class="h-2 bg-gray-700 rounded">
+                                <div class="progress-bar h-full rounded" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Tools -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Trading Tools</h3>
+                    <div class="space-y-3">
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Pip Calculator
+                        </button>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+                            Position Sizer
+                        </button>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                            Risk Calculator
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Trading Psychology -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Reality Checks</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-red-500">⚠️</span>
+                            <span>Your emotions are not your friends</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-yellow-500">⚠️</span>
+                            <span>FOMO is a career killer</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-500">⚠️</span>
+                            <span>Size matters (Position size, that is)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
